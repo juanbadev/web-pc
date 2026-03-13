@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LinuxCloud — Tu Linux en el navegador</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="page-home">
+
+  <!-- Fondo animado -->
+  <div class="bg-grid"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-brand">
+      <span class="brand-icon">⬡</span>
+      <span class="brand-name">LinuxCloud</span>
+    </div>
+    <nav class="navbar-links">
+      <a href="/login.html" class="btn btn-ghost">Iniciar sesión</a>
+      <a href="/register.html" class="btn btn-primary">Crear cuenta</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Entornos Linux instantáneos
+      </div>
+      <h1 class="hero-title">
+        Tu propio<br/>
+        <span class="title-accent">Linux</span><br/>
+        en el navegador
+      </h1>
+      <p class="hero-desc">
+        Registrate, haz clic y tendrás un entorno Linux completo y privado,
+        corriendo en Docker, accesible desde cualquier dispositivo.
+      </p>
+      <div class="hero-actions">
+        <a href="/register.html" class="btn btn-primary btn-lg">
+          Empezar gratis →
+        </a>
+        <a href="/login.html" class="btn btn-outline btn-lg">
+          Ya tengo cuenta
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">Docker</span><span class="stat-l">Aislado</span></div>
+        <div class="stat-sep">|</div>
+        <div class="stat"><span class="stat-n">ttyd</span><span class="stat-l">Terminal web</span></div>
+        <div class="stat-sep">|</div>
+        <div class="stat"><span class="stat-n">Ubuntu 22</span><span class="stat-l">Base</span></div>
+      </div>
+    </div>
+
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">linuxuser@cloud:~</span>
+      </div>
+      <div class="terminal-body" id="demoTerm"></div>
+    </div>
+  </main>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">🐳</div>
+        <h3>Contenedor dedicado</h3>
+        <p>Cada usuario obtiene su propio contenedor Docker aislado. Tu entorno es tuyo.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔐</div>
+        <h3>Sesión segura</h3>
+        <p>Autenticación JWT, contraseñas hasheadas con bcrypt y protección anti-fuerza bruta.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">⚡</div>
+        <h3>Instantáneo</h3>
+        <p>Tu entorno Linux arranca en segundos. Sin configuración, sin instalaciones.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🌐</div>
+        <h3>Solo el navegador</h3>
+        <p>Terminal completa en el navegador gracias a ttyd. Funciona en móvil y escritorio.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>LinuxCloud · Construido con Flask + Docker + ttyd</p>
+  </footer>
+
+  <script src="/js/particles.js"></script>
+  <script src="/js/demo-terminal.js"></script>
+</body>
+</html>
